@@ -40,11 +40,7 @@ const app = express();
 // Enhanced CORS configuration
 app.use(
 	cors({
-		origin: [
-			"http://localhost:3000",
-			"http://localhost:3001",
-			`${frontendUrl}`,
-		],
+		origin: ["https://loan-manager-frontend-bcvd.vercel.app/"],
 		methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
 		allowedHeaders: ["Content-Type", "Authorization"],
 		credentials: true,
