@@ -10,6 +10,7 @@ const { MongoClient, ServerApiVersion } = require("mongodb");
 dotenv.config();
 
 const uri = process.env.DATABASE_URL;
+const frontendUrl = process.env.FRONTEND_URL;
 
 const client = new MongoClient(uri, {
 	serverApi: {
@@ -39,7 +40,11 @@ const app = express();
 // Enhanced CORS configuration
 app.use(
 	cors({
-		origin: ["http://localhost:3000", "http://localhost:3001"],
+		origin: [
+			"http://localhost:3000",
+			"http://localhost:3001",
+			`${frontendUrl}`,
+		],
 		methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
 		allowedHeaders: ["Content-Type", "Authorization"],
 		credentials: true,
