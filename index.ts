@@ -41,7 +41,10 @@ const app = express();
 app.use(
 	cors({
 		origin: [
-			"*"
+			"https://loan-manager-frontend-bcvd.vercel.app/",
+			"https://loan-manager-frontend-bcvd.vercel.app",
+			"https://loan-manager-frontend-288cp58z7-sam-arth07s-projects.vercel.app/",
+			"https://loan-manager-frontend-288cp58z7-sam-arth07s-projects.vercel.app"
 		],
 		methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
 		allowedHeaders: ["Content-Type", "Authorization"],
