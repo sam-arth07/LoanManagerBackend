@@ -1,34 +1,36 @@
 {
-  "name": "loan-manager-backend",
-  "version": "1.0.0",
-  "type": "commonjs",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "ts-node-dev index.ts",
-    "generate": "prisma generate",
-    "db:push": "prisma db push"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@clerk/clerk-sdk-node": "^5.1.6",
-    "@clerk/express": "^1.4.16",
-    "@prisma/client": "^6.7.0",
-    "cors": "^2.8.5",
-    "dotenv": "^16.5.0",
-    "express": "^5.1.0",
-    "mongodb": "^5.9.1",
-    "ts-node-dev": "^2.0.0",
-    "typescript": "^5.8.3"
-  },
-  "devDependencies": {
-    "@types/cors": "^2.8.18",
-    "@types/express": "^5.0.1",
-    "prisma": "^6.7.0",
-    "ts-node-dev": "^2.0.0",
-    "typescript": "^5.0.0"
-  }
+	"name": "loan-manager-backend",
+	"version": "1.0.0",
+	"type": "commonjs",
+	"description": "",
+	"main": "dist/index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "ts-node-dev index.ts",
+		"build": "prisma generate && tsc",
+		"start": "node dist/index.js",
+		"generate": "prisma generate",
+		"db:push": "prisma db push"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@clerk/clerk-sdk-node": "^5.1.6",
+		"@clerk/express": "^1.4.16",
+		"@prisma/client": "^6.7.0",
+		"cors": "^2.8.5",
+		"dotenv": "^16.5.0",
+		"express": "^5.1.0",
+		"mongodb": "^5.9.1",
+		"ts-node-dev": "^2.0.0",
+		"typescript": "^5.8.3"
+	},
+	"devDependencies": {
+		"@types/cors": "^2.8.18",
+		"@types/express": "^5.0.1",
+		"prisma": "^6.7.0",
+		"ts-node-dev": "^2.0.0",
+		"typescript": "^5.0.0"
+	}
 }
