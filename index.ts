@@ -59,7 +59,7 @@ app.use(
 			return callback(null, true);
 		},
 		credentials: true,
-		methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+		methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"], // Added PATCH
 		allowedHeaders: [
 			"Origin",
 			"X-Requested-With",
