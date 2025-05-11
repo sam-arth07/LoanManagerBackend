@@ -40,7 +40,10 @@ const app = express();
 // Enhanced CORS configuration
 app.use(
 	cors({
-		origin: ["https://loan-manager-frontend-bcvd.vercel.app/"],
+		origin: [
+			"https://loan-manager-frontend-bcvd.vercel.app/",
+			"https://loan-manager-frontend-bcvd.vercel.app", // Added origin without trailing slash
+		],
 		methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
 		allowedHeaders: ["Content-Type", "Authorization"],
 		credentials: true,
